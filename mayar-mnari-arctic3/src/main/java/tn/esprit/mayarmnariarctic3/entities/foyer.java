@@ -17,7 +17,6 @@ public class foyer {
     private long capaciteFoyer ;
     @OneToOne(mappedBy = "idfoyer")
     private Universite iduniversite ;
-
-    @OneToMany(mappedBy = "idfoyer")
+    @OneToMany(mappedBy = "idfoyer" , cascade = CascadeType.ALL)
     private Set<bloc> blocs ;
 }

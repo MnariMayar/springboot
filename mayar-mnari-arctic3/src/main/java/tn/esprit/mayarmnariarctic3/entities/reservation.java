@@ -18,6 +18,6 @@ public class reservation {
     private int idReservation ;
     private Date anneeuniversitaire;
     private Boolean estValide;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<etudiant> etudiants ;
 }

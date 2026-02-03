@@ -16,8 +16,8 @@ public class bloc {
     private int idBloc ;
     private String nomBloc ;
     private long capaciteBloc ;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private foyer idfoyer;
-    @OneToMany(mappedBy = "idbloc")
+    @OneToMany(mappedBy = "idbloc" , cascade = CascadeType.ALL)
     private Set<chambre> chambres;
 }

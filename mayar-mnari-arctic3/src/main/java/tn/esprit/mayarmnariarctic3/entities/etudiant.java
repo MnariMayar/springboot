@@ -18,6 +18,6 @@ public class etudiant {
     private int cin ;
     private String ecole ;
     private Date dateNaissance ;
-    @ManyToMany(mappedBy = "etudiants")
+    @ManyToMany(mappedBy = "etudiants",cascade = CascadeType.ALL)
     private Set<reservation> reservations ;
 }

@@ -16,8 +16,8 @@ public class chambre {
     private String nomChambre ;
     @Enumerated(EnumType.STRING)
     private typechambre typeC ;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private bloc idbloc ;
-    @OneToMany()
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<reservation> reservations ;
 }
